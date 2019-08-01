@@ -7,24 +7,24 @@ To get "Ubuntu on Windows" and other linux kernels see [instructions](https://do
 4. Double-click on the downloaded `.appx` file to install follow instructions
   - Create a unix username and password.  No need for these to match your windows login, but the username can't hurt!
 
-In the ubuntu terminal, first install python/etc. tools
+## Installing Conda
+1. In the ubuntu terminal, first install python/etc. tools
 ```bash
 wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
 bash Anaconda3-2019.07-Linux-x86_64.sh
 ```
-The installation will take time.  You should:
+2. The installation will take time.  You should:
 - accept default paths
 - accept licensing terms
 - Manually choose `yes` too have it do the `conda init`
 
-Close and reopen your shell
-
-Then install the ssh tunneling tool.
+3. Close and reopen your shell
+4. Install the ssh tunneling tool
 ```bash
 pip install sshuttle
 ```
 
-**More Administration Tips
+## More Administration Tips
 - (Optional): Consider activating the newest version https://docs.microsoft.com/en-us/windows/wsl/wsl2-install
 - You can reset your ubuntu setup by
   - Searching for ubuntu from the main "Start" icon, right-click on the "Ubuntu" app, Choose "App Settings", then choose "Reset"
