@@ -14,8 +14,15 @@ Given a linux (on Windows or otherwise) supporting ssh, follow:
    -  While there are alternatives, (e.g. [MobaXTerm](https://docs.computecanada.ca/wiki/Connecting_with_MobaXTer) ) the benefit of WSL is you then have a full linux setup
 3. Follow [Setup instructions](setup.md)
 
+After you have done the initial setup you can run code several ways:
+- Run `julia` within a login node (for small tests, etc.).  Do not ask for lots of resources this way!  It isn't how clusters work
+- Non-interactive [Jupyter](jupyter_login_node.md) accessed from your local machine
+- Run an interactive [Interactive Jupyter Job](jupyter_job.md) accessed from your local machine
+- Submit [Non-Interactive Julia Jobs](julia_jobs.md)
+
 
 
 ## More on Compute Canada
 - List of [Available Software](https://docs.computecanada.ca/wiki/Available_software)
-- Instructions for using [Jupyter](https://docs.computecanada.ca/wiki/Jupyter) and more on [SSH Tunnelling](https://docs.computecanada.ca/wiki/SSH_tunnelling)
+- For more on our [Interactive Jupyter Job](jupyter_job.md) see  may be easier
+    - [Jupyter](https://docs.computecanada.ca/wiki/Jupyter) and more on [SSH Tunnelling](https://docs.computecanada.ca/wiki/SSH_tunnelling). 

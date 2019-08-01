@@ -40,8 +40,15 @@ git clone https://github.com/ubcecon/cluster_tools.git
 ```
 3. Then run the built in setup script (warning: this will replace your `.bashrc` and delete `.julia` and a few others)
 ```bash
-bash ~/cluster_tools/scripts/setup_cluster.sh
+bash ~/cluster_tools/bin/setup_cluster.sh
 ```
-4. Type `exit` to close the cluster, relogin in, and you should be good to go.
+4. This should take 5'ish minutes for the full setup.  After it is done, type `exit` to close the cluster, reshell in, and you should be good to go.
 
-If the `cluster_tools` are modified and you want to redo the setup, simply go inside the folder `cd cluster_tools` and then `git pull` and then go back to `cd ~` before running it again.
+
+Note: If the `cluster_tools` are modified and you want to redo the setup, simply go in order,
+```bash
+cd cluster_tools
+git pull
+cd ..
+bash ~/cluster_tools/bin/setup_cluster.sh
+```
