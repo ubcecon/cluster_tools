@@ -15,8 +15,11 @@ module load gcc/7.3.0
 module load julia/1.1.1
 module load python/3.6
 
-# install jupyterlab
+virtualenv $HOME/jupyter_py3
+source $HOME/jupyter_py3/bin/activate
 pip install jupyterlab
 
-# install IJulia on top of jupyterlab
+echo -e '#!/bin/bash\nunset XDG_RUNTIME_DIR\njupyter lab --ip $(hostname -f) --no-browser' > $VIRTUAL_ENV/bin/notebook.sh
+
+# Install important julia pacakges and jupyter support
 julia -e 'using Pkg; pkg"add IJulia"'
