@@ -1,4 +1,5 @@
-## WSL and Conda
+## Install WSL from Ubuntu and Conda
+
 To get "Ubuntu on Windows" and other linux kernels see [instructions](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or:
 1. Run `powershell` as an administrator (i.e. right-click on the icon and choose `Run as Administrator`
 2. Run `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`   and a reboot may be required
@@ -23,4 +24,7 @@ Then install the ssh tunneling tool.
 pip install sshuttle
 ```
 
-Optional: Consider activating the newest vesrion https://docs.microsoft.com/en-us/windows/wsl/wsl2-install
+**More Administration Tips
+- (Optional): Consider activating the newest version https://docs.microsoft.com/en-us/windows/wsl/wsl2-install
+- You can reset your ubuntu setup by
+  - Searching for ubuntu from the main "Start" icon, right-click on the "Ubuntu" app, Choose "App Settings", then choose "Reset"
