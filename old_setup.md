@@ -23,6 +23,7 @@ In vim, you go `<ESC> i` to enter insert mode, and when you are done `<ESC> :wq!
  
  In a ssh 
 ```bash
+module load gcc/7.3.0
 module load julia/1.1.1
 module load python/3.6
 virtualenv $HOME/jupyter_py3
