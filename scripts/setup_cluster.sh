@@ -11,7 +11,7 @@ rm -rf jupyter_py3
 
 
 # overwrite the current .bashrc file
-\cp ~/scripts/.bashrc ~/.bashrc
+\cp ~/cluster_tools/scripts/.bashrc ~/.bashrc
 
 # load modules, create virtual environments to make jupyter easier.
 module load gcc/7.3.0
