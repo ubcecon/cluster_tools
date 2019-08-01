@@ -32,6 +32,7 @@ pip install jupyter
 pip install jupyterlab
 echo -e '#!/bin/bash\nunset XDG_RUNTIME_DIR\njupyter lab --ip $(hostname -f) --no-browser' > $VIRTUAL_ENV/bin/notebook.sh
 chmod u+x $VIRTUAL_ENV/bin/notebook.sh
+julia -e 'using Pkg; pkg"add IJulia"'
 ```
 Then to add in Julia support, first run the notebook (I think this is necessary?  Remove if not).
 ```bash
