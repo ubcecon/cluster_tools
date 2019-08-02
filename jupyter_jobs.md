@@ -15,17 +15,7 @@ salloc --time=1:0:0 --ntasks=1 --cpus-per-task=2 --mem-per-cpu=1024M --account=d
 
 ## On the Desktop
 
-Then in another screen start a tunnel (replacing the cdrXXX and username)
-```julia
-ssh -L 8888:cdrXXX.int.cedar.computecanada.ca:8888 USERNAME@cedar.computecanada.ca
-```
-
-
-There are a few options, depending on the number of resources:
-
-Tunneling:  `sshuttle --dns -Nr $CCUSER@cedar.computecanada.ca` should work but isn't.  Why not?
-
-Alternatively, try replacing he `XXX` with the cluster number
-```
-ssh -L 8888:cdrXXX.int.cedar.computecanada.ca:8888 USERNAME@cedar.computecanada.ca
+Then in another screen start a tunnel (replacing the cdrXXX and username if required)
+```bash
+ssh -L 8888:cdrXXX.int.cedar.computecanada.ca:8888 $CCUSER@cedar.computecanada.ca -N -f
 ```
