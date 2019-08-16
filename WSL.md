@@ -20,11 +20,7 @@ bash Anaconda3-2019.07-Linux-x86_64.sh
 2. The installation will take time.  You should:
    - accept default paths
    - accept licensing terms
-   - *IMPORTANT* Manually choose `yes` too have it do the `conda init` 
-3. Install the ssh tunneling tool
-```bash
-pip install sshuttle
-```
+   - *IMPORTANT* Manually choose `yes` to have it do the `conda init`
 
 ## More Administration Tips
 - (Optional): Consider activating the newest version https://docs.microsoft.com/en-us/windows/wsl/wsl2-install
