@@ -17,7 +17,7 @@ Given a linux (on Windows or otherwise) supporting ssh, follow:
 After you have done the initial setup you can run code several ways:
 - Run `julia` within a login node (for small tests, etc.).  Do not ask for lots of resources this way!  It isn't how clusters work
 - Non-interactive [Jupyter](jupyter_login_node.md) accessed from your local machine
-- Run an interactive [Interactive Jupyter Job](jupyter_job.md) accessed from your local machine
+- Run an interactive [Interactive Jupyter Job](jupyter_jobs.md) accessed from your local machine
 - Submit [Non-Interactive Julia Jobs](julia_jobs.md)
 
 
