@@ -6,7 +6,7 @@ Clusters are inherently based on scheduling of jobs. To use Jupyter interactivel
 bash ~/cluster_tools/bin/launch_jupyter.sh
 ```
 
-    - Note: These codes submit an interactive job to the cluster. ComputeCanada uses [SLURM](https://docs.computecanada.ca/wiki/Running_jobs) scheduling system. The Jupyter notebooks created in this way will be stored on the cluster under directory `$HOME/scratch/`
+    Note: These codes submit an interactive job to the cluster. ComputeCanada uses [SLURM](https://docs.computecanada.ca/wiki/Running_jobs) scheduling system. The Jupyter notebooks created in this way will be stored on the cluster under directory `$HOME/scratch/`
 
 2. Then in another terminal **on your local machine**, start a tunnel (replacing the cdrXXX and username if required)
 ```bash
