@@ -6,11 +6,11 @@ Clusters are inherently based on scheduling of jobs. To use Jupyter interactivel
 bash ~/cluster_tools/bin/launch_jupyter.sh
 ```
 
-    Note: These codes submit an interactive job to the cluster. ComputeCanada uses [SLURM](https://docs.computecanada.ca/wiki/Running_jobs) scheduling system. The Jupyter notebooks created in this way will be stored on the cluster under directory `$HOME/scratch/`
-
 2. Then in another terminal **on your local machine**, start a tunnel (replacing the cdrXXX and username if required)
 ```bash
 ssh -L 8888:cdrXXX.int.cedar.computecanada.ca:8888 $CCUSER@cedar.computecanada.ca -N -f
 ```
 
 3. Open webpage `http://127.0.0.1:8888` with any of your web browsers (Chrome, Firefox, etc).
+
+Note: These codes submit an interactive job to the cluster behind the scenes. ComputeCanada uses [SLURM](https://docs.computecanada.ca/wiki/Running_jobs) scheduling system. The Jupyter notebooks created in this way will be stored on the cluster under directory `$HOME/scratch/`
