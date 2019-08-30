@@ -54,7 +54,7 @@ ssh-keygen
     ssh-copy-id -i ~/.ssh/id_rsa.pub $CCUSER@cedar.computecanada.ca
     ```
     Windows Powershell:
-    ```bash
+    ```powershell
     cat ~/.ssh/id_rsa.pub | ssh $env:CCUSER@cedar.computecanada.ca "cat >> ~/.ssh/authorized_keys"
     ```
 
