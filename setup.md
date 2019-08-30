@@ -10,7 +10,8 @@ Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Ce
 ## Create an environment variable
 While not strictly needed, an environment variable for your username will help significantly.
 
-### For Linux / Mac OS users
+**Linux / Mac OS**
+
 If your login is `YOURUSERNAME` then run
 ```bash
 export CCUSER=YOURUSERNAME
@@ -23,7 +24,8 @@ Then add `export CCUSER=YOURUSERNAME` at the bottom
 
 In Vim, you go `<ESC> i` to enter insert mode, make your changes, and then `<ESC> :wq!` to save and exit (`:w` means to save, `:q` means to exit, you can also type `:help` for more details).
 
-### For Windows users
+**Windows Powershell**
+
 If your login is `YOURUSERNAME` then run
 ```powershell
 [Environment]::SetEnvironmentVariable("CCUSER", "YOURUSERNAME", "Machine")
@@ -32,33 +34,33 @@ to add an global, persistent environment variable. You can also manually add thi
 
 ## (Optional) Generate Keys for login
 
-1. Login to compute canada using your login and password (choosing `yes` to connect anyways)
+1. Login to ComputeCanada using your login and password (choosing `yes` to connect anyways)
 
-    Linux / Mac OS:
+    **Linux / Mac OS**
     ```bash
     ssh $CCUSER@cedar.computecanada.ca
     ```
-    Windows Powershell:
+    **Windows Powershell**
     ```bash
     ssh $env:CCUSER@cedar.computecanada.ca
     ```
 2. Then close the connection by typing `exit`
-3. If needed, get ssh keys by running the following, and accepting the default location (e.g. `~/.ssh/id_rsa.pub`) and you can add a passphrase if you wish
+3. If needed, get SSH keys by running the following, and accepting the default location (e.g. `~/.ssh/id_rsa.pub`) and you can add a passphrase if you wish
 ```bash
 ssh-keygen
 ```
-4. Then attach the ssh to the computecanada, where you should replace `$CCUSER` if you did not set that environment variable above.
+4. Then attach the SSH to the ComputeCanada, where you should replace `$CCUSER` if you did not set that environment variable above.
 
-    Linux / Mac OS:
+    **Linux / Mac OS**
     ```bash
     ssh-copy-id -i ~/.ssh/id_rsa.pub $CCUSER@cedar.computecanada.ca
     ```
-    Windows Powershell:
+    **Windows Powershell**
     ```powershell
     cat ~/.ssh/id_rsa.pub | ssh $env:CCUSER@cedar.computecanada.ca "cat >> ~/.ssh/authorized_keys"
     ```
 
-    You will need to login with your password again, but afterwards you will not need to login when you use the `ssh` to that server
+    You will need to login with your password again, but afterwards you will not need to login when you use the `ssh` to that server.
 
 # Installation Instructions on the Cluster
 
