@@ -1,28 +1,26 @@
 # Documentation and Tools for Accessing Compute Canada
 
-(Note for Windows) if you are on Windows you need to get a ssh terminal. 
-- See [WSL](WSL.md) for Windows installation instructions to get Ubuntu terminals
-- Note:  While there are alternatives, (e.g. Putty and  MobaXTerm) the benefit of using Ubuntu on Windows is that you can then follow normal linux setup instructions, can use standard tools/scripts, etc.
+(Note for Windows) if you are on Windows you need to get a SSH terminal.
+- Any version of Windows 10 that is up to date enables SSH by default in `cmd` or in Powershell. Powershell is sufficient for most of the exercises we do.
+- For anyone interested in further exploiting the interaction between the cluster and the local machine, a Unix/Linux environment is recommended. One of the most convinient ways is to use WSL. See [Windows Subsystem for Linux (WSL)](WSL.md) for Windows installation instructions to get Ubuntu terminals in Windows.
+- Note: There are other alternatives that support SSH on Windows such as Putty and MobaXTerm. [MobaXTerm](https://docs.computecanada.ca/wiki/Connecting_with_MobaXTerm) is officially supported by ComputeCanada. Both of them allow 3rd-party, light-weight access to the cluster, but you won't have a fully functional Unix/Linux environment.
 
 ## Getting started
 
-Given a linux (on Windows or otherwise) supporting ssh, follow:
+Given a SSH supporting environment (Unix/Linux, Windows Powershell, WSL, etc.),
 1. [Apply for a Compute Canada Account](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/)
-   - If you are a grad student, RA, etc. you will need a faculty sponsor, who will need a compute canada account themselves
-   - You will need them to provide you their compute canada **CCRI** which is a form like `abc-123-01`
-2. (Windows Specific) You need an ssh terminal.  Follow [WSL](WSL.md) to get Ubuntu running on Windows
-   -  While there are alternatives, (e.g. [MobaXTerm](https://docs.computecanada.ca/wiki/Connecting_with_MobaXTer) ) the benefit of WSL is you then have a full linux setup
-3. Follow [Setup instructions](setup.md)
+   - If you are a grad student, RA, etc. you will need a faculty sponsor, who will need a ComputeCanada account themselves
+   - You will need them to provide you their ComputeCanada **CCRI** which is a form like `abc-123-01`
+2. Follow [Setup instructions](setup.md)
 
 After you have done the initial setup you can run code several ways:
-- Run `julia` within a login node (for small tests, etc.).  Do not ask for lots of resources this way!  It isn't how clusters work
+- Run `julia` within a login node (for small tests ONLY).  Do not ask for lots of resources this way!  It isn't how clusters work
 - Non-interactive [Jupyter](jupyter_login_node.md) accessed from your local machine
 - Run an interactive [Interactive Jupyter Job](jupyter_jobs.md) accessed from your local machine
 - Submit [Non-Interactive Julia Jobs](julia_jobs.md)
 
 
-
 ## More on Compute Canada
 - List of [Available Software](https://docs.computecanada.ca/wiki/Available_software)
 - For more on our [Interactive Jupyter Job](jupyter_jobs.md) see  may be easier
-    - [Jupyter](https://docs.computecanada.ca/wiki/Jupyter) and more on [SSH Tunnelling](https://docs.computecanada.ca/wiki/SSH_tunnelling). 
+    - [Jupyter](https://docs.computecanada.ca/wiki/Jupyter) and more on [SSH Tunnelling](https://docs.computecanada.ca/wiki/SSH_tunnelling).
