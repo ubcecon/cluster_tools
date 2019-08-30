@@ -41,7 +41,7 @@ to add an global, persistent environment variable. You can also manually add thi
     ssh $CCUSER@cedar.computecanada.ca
     ```
     **Windows Powershell**
-    ```bash
+    ```powershell
     ssh $env:CCUSER@cedar.computecanada.ca
     ```
 2. Then close the connection by typing `exit`
