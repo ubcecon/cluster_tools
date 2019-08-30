@@ -28,7 +28,7 @@ If your login is `YOURUSERNAME` then run
 ```powershell
 [Environment]::SetEnvironmentVariable("CCUSER", "YOURUSERNAME", "Machine")
 ```
-You can also manually add it through **Control Panel**.
+to add an global, persistent environment variable. You can also manually add this environment variable through **Control Panel**.
 
 ## (Optional) Generate Keys for login
 
