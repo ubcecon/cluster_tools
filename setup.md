@@ -1,8 +1,17 @@
 # Installation instructions on your desktop
-First, if on Windows, then get Ubuntu on WSL with [WSL](WSL.md) and open an ubuntu terminal.  After that, all OS have the same instructions.
+First, if on Windows, make sure the system is updated (any version of an updated Windows 10 would work). You can choose either one of the two ways to set up your environment:
 
-## Create an environment variable 
-While not strictly needed, an environment variable for your username will help significantly.  If your login is `YOURUSERNAME` then run
+- Get Ubuntu on Windows Subsystem for Linux (WSL) with [WSL](WSL.md) and open an Ubuntu terminal. Follow instructions for Linux / Mac OS after that. Always start with your `$HOME` directory by `cd ~`.
+
+- For those who are just going to try out Jupyter notebooks on the cluster, stay with Windows by using Powershell. Always run Powershell in `Run as Administrator` mode. Follow instructions for Windows.
+
+Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Cedar) cluster on [ComputeCanada](https://www.computecanada.ca/). You can also try other clusters by youself, see [List of Clusters](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/).
+
+## Create an environment variable
+While not strictly needed, an environment variable for your username will help significantly.
+
+### For Linux / Mac OS users
+If your login is `YOURUSERNAME` then run
 ```bash
 export CCUSER=YOURUSERNAME
 ```
@@ -12,7 +21,14 @@ vim .bashrc
 ```
 Then add `export CCUSER=YOURUSERNAME` at the bottom
 
-In vim, you go `<ESC> i` to enter insert mode, make your changes, and then `<ESC> :wq!` to save and exit.
+In Vim, you go `<ESC> i` to enter insert mode, make your changes, and then `<ESC> :wq!` to save and exit (`:w` means to save, `:q` means to exit, you can also type `:help` for more details).
+
+### For Windows users
+If your login is `YOURUSERNAME` then run
+```powershell
+[Environment]::SetEnvironmentVariable("CCUSER", "YOURUSERNAME", "Machine")
+```
+You can also manually add it through **Control Panel**.
 
 ## (Optional) Generate Keys for login
 
