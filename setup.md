@@ -61,6 +61,17 @@ ssh-keygen
     ```
 
     You will need to login with your password again, but afterwards you will not need to login when you use the `ssh` to that server.
+5. (Optional) Setting up a `config` file will make your life even easier in logging into the cluster using `ssh` or copy files using  `scp`.
+    - Create a file `~/.ssh/config`
+    - Enter the following (with your own ComputeCanada username replaced)
+    ```bash
+    Host cedar
+	      User YOURUSERNAME
+	      Hostname cedar.computecanada.ca
+	      IdentityFile ~/.ssh/id_rsa
+	      ForwardX11 yes
+    ```
+    - After that you only need to `ssh cedar` and `scp cedar` when logging on or copy files from the cluster
 
 # Installation Instructions on the Cluster
 
