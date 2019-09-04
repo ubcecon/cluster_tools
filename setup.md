@@ -86,7 +86,6 @@ bash ~/cluster_tools/bin/setup_cluster.sh
 ```
 4. This should take 5'ish minutes for the full setup.  After it is done, type `exit` to close the cluster, reshell in, and you should be good to go.
 
-
 Note: If the `cluster_tools` are modified and you want to redo the setup, simply execute:
 ```bash
 cd cluster_tools

@@ -3,7 +3,7 @@
 (Note for Windows) if you are on Windows you need to get a SSH terminal.
 - Any version of Windows 10 that is up to date enables SSH by default in `cmd` or in Powershell. Powershell is sufficient for most of the exercises we do.
 - For anyone interested in further exploiting the interaction between the cluster and the local machine, a Unix/Linux environment is recommended. One of the most convinient ways is to use WSL. See [Windows Subsystem for Linux (WSL)](WSL.md) for Windows installation instructions to get Ubuntu terminals in Windows.
-- Note: There are other alternatives that support SSH on Windows such as Putty and MobaXTerm. [MobaXTerm](https://docs.computecanada.ca/wiki/Connecting_with_MobaXTerm) is officially supported by ComputeCanada. Both of them allow 3rd-party, light-weight access to the cluster, but you won't have a fully functional Unix/Linux environment.
+- Note: There are other alternatives that support SSH on Windows such as Putty and MobaXTerm. [MobaXTerm](https://docs.computecanada.ca/wiki/Connecting_with_MobaXTerm) is officially supported by ComputeCanada. Both of them allow 3rd-party, light-weight access to the cluster, but you won't have a fully functional Unix/Linux environment. This would potentially cause problems when you manipulate the files.
 
 ## Getting started
 
