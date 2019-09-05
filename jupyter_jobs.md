@@ -1,4 +1,4 @@
-## Scheduled Jupyter Jobs
+# Scheduled Jupyter Jobs
 Clusters are inherently based on scheduling of jobs. To use Jupyter interactively, you need to schedule an **interactive** job and then connect to it from your local machine.
 
 1. In one terminal, login to ComputeCanada, and run the launching codes **on the cluster**
