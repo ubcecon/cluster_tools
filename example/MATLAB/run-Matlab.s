@@ -1,11 +1,3 @@
-# Scheduled Non-interactive Matlab jobs
-
-For Matlab, Parallel Computing Toolbox is available on the cluster while distributed computing is not supported. Therefore, in the SLURM submission file we request 1 node with multiple CPUs.
-
-1. Learn some [basic SLURM commands](SLURM_basic.md)
-1. Submit your Matlab job with a SLURM script similar to the following one
-
-```bash
 #!/bin/bash
 
 #SBATCH --job-name=Matlab_example               # Name your project
@@ -36,14 +28,10 @@ cat<<EOF | srun matlab -nodisplay
 
 parpool('local', $SLURM_CPUS_PER_TASK)
 
-PUT YOUR MATLAB FUNCTIONS OR SCRIPTS HERE
+pi_parallel
 
 exit
 
 EOF
 
 rm -rf $SLURM_JOBTMP
-
-```
-
-An example is provided in this repository under `/example/MATLAB/`. More references and official support from ComputeCanada on [Matlab](https://docs.computecanada.ca/wiki/MATLAB).
