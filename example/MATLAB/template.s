@@ -9,8 +9,6 @@
 module purge
 module load matlab/2018a
 
-cd $SCRATCH/
-
 if [ "$SLURM_JOBTMP" == "" ]; then
     export SLURM_JOBTMP=$SCRATCH/$$ # Use current PID as folder identifier
     mkdir -p $SLURM_JOBTMP
@@ -35,5 +33,3 @@ EOF
 
 mv res.mat "res_${SLURM_JOB_ID}.mat"
 rm -rf $SLURM_JOBTMP
-
-
