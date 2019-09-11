@@ -15,6 +15,10 @@ Given a SSH supporting environment (Unix/Linux, Windows Powershell, WSL, etc.),
 
 After you have done the initial setup you can run code several ways:
 - Run `julia` within a login node (for small tests ONLY).  Do not ask for lots of resources this way!  It isn't how clusters work. The resources on a login node is limited and shared. You may GET PENALIZED by system administrators if you insist to run heavy-duty jobs on login nodes.
+- Run an interactive job through command prompt:
+```bash
+salloc --time=1:0:0 --nodes=1 --cpus-per-task=4
+```
 - Run an interactive [Interactive Jupyter Job](jupyter_jobs.md) accessed from your local machine
 - Submit non-interactive jobs: [MATLAB](matlab_jobs.md), [Julia](julia_jobs.md)
 
