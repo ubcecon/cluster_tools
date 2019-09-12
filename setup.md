@@ -76,7 +76,7 @@ ssh-keygen
     - Copy/paste and execute the following to generate the file
     ```powershell
 	$file = @"
-	Host cedar
+	Host  cedar
 	      User $Env:CCUSER
 	      Hostname cedar.computecanada.ca
 	      IdentityFile ~/.ssh/id_rsa
