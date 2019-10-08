@@ -1,11 +1,11 @@
 # Installation instructions on your desktop
-First, if on Windows, make sure the system is updated (any version of an updated Windows 10 would work). You can choose either one of the two ways to set up your environment:
+First, if on Windows, make sure the system is updated (any version of an updated Windows 10 would work). You can choose either to stick with `powershell` or install [WSL](WSL.md), then follow either of the two:
 
-- Get Ubuntu on Windows Subsystem for Linux (WSL) with [WSL](WSL.md) and open an Ubuntu terminal. Follow instructions for Linux / Mac OS after that. Always start with your `$HOME` directory by `cd ~`.
+- Run Powershell in `Run as Administrator` mode. Follow instructions for Windows.
 
-- For those who are just going to try out Jupyter notebooks on the cluster, stay with Windows by using Powershell. Always run Powershell in `Run as Administrator` mode. Follow instructions for Windows.
+- Get Ubuntu on with [WSL](WSL.md) and open an Ubuntu terminal. Follow instructions for Linux / Mac OS after that. Always start with your `$HOME` directory by `cd ~`.
 
-Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Cedar) cluster on [ComputeCanada](https://www.computecanada.ca/). You can also try other clusters by youself, see [List of Clusters](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/).
+Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Cedar) cluster on [ComputeCanada](https://www.computecanada.ca/). You can also try other clusters by yourself, see [List of Clusters](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/).
 
 ## Create an environment variable
 While not strictly needed, an environment variable for your username will help significantly.
