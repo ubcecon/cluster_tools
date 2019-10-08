@@ -1,4 +1,4 @@
-# Installation instructions on your desktop
+# Installation instructions
 First, if on Windows, make sure the system is updated (any version of an updated Windows 10 would work). You can choose either to stick with `powershell` or install [WSL](WSL.md), then follow either of the two:
 
 - Run Powershell in `Run as Administrator` mode. Follow instructions for Windows.
@@ -7,7 +7,7 @@ First, if on Windows, make sure the system is updated (any version of an updated
 
 Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Cedar) cluster on [ComputeCanada](https://www.computecanada.ca/). You can also try other clusters by yourself, see [List of Clusters](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/).
 
-## Create an environment variable
+## Create an environment variable and Login
 While not strictly needed, an environment variable for your username will help significantly.
 
 **Linux / Mac OS**
@@ -32,24 +32,26 @@ If your login is `YOURUSERNAME` then run
 ```
 to add an global, persistent environment variable. You can also manually add this environment variable through **Control Panel**.
 
-## (Optional) Generate Keys for login
+Now, you can login to ComputeCanada using your username and password.
 
-1. Login to ComputeCanada using your login and password (choosing `yes` to connect anyways)
-
-    **Linux / Mac OS**
-    ```bash
-    ssh $CCUSER@cedar.computecanada.ca
-    ```
-    **Windows Powershell**
-    ```powershell
-    ssh $env:CCUSER@cedar.computecanada.ca
-    ```
-2. Then close the connection by typing `exit`
-3. If needed, get SSH keys by running the following, and accepting the default location (e.g. `~/.ssh/id_rsa.pub`) and you can add a passphrase if you wish
+**Linux / Mac OS**
 ```bash
-ssh-keygen
+ssh $CCUSER@cedar.computecanada.ca
 ```
-4. Then attach the SSH to the ComputeCanada, where you should replace `$CCUSER` if you did not set that environment variable above.
+**Windows Powershell**
+```powershell
+ssh $env:CCUSER@cedar.computecanada.ca
+```
+The first time you login to the cluster, it will add a fingerprint to your local machine. Type `yes` when you encounter that question.
+
+You can close the connection by typing `exit`.
+
+## Generate Keys and Set Configuration for Login
+
+To make your life easier in logging into the cluster and transferring files from and to the cluster, we create a configuration file and generate `ssh` keys for that.
+
+1. Open your terminal (`powershell` if on Windows), type `ssh-keygen` and run. Accept the default location if asked. The default location is `~/.ssh/id_rsa.pub` (Windows users: you can `cd ~` in `powershell` as well. The directory `~` is equivalent to `C:\Users\YOURUSERNAME`. You can use either `/` or `\` in navigating to directories)
+2. Then attach the `ssh` key to ComputeCanada, where you should replace `$CCUSER` with your own username if you did not set that environment variable above.
 
     **Linux / Mac OS**
     ```bash
@@ -60,26 +62,26 @@ ssh-keygen
     cat ~/.ssh/id_rsa.pub | ssh $env:CCUSER@cedar.computecanada.ca "cat >> ~/.ssh/authorized_keys"
     ```
 
-    You will need to login with your password again, but afterwards you will not need to login when you use the `ssh` to that server.
-5. (Optional) Setting up a `config` file will make your life even easier in logging into the cluster using `ssh` or copy files using  `scp`.
-    - Create a file `~/.ssh/config`
-    - Enter the following (with your own ComputeCanada username replaced)
+    You will need to login with your password again, but afterwards you will not need to login when you `ssh` to that server.
+5. Set up a `config` file to simply `ssh` and `scp` processes
+    - Open a text editor and enter the following (with your own ComputeCanada username replaced)
     ```bash
     Host cedar
 	      User YOURUSERNAME
 	      Hostname cedar.computecanada.ca
 	      IdentityFile ~/.ssh/id_rsa
-	      ForwardX11 yes
     ```
+	- Save the file to `~/.ssh/config`.
     - After that you only need to `ssh cedar` and `scp cedar` when logging on or copy files from the cluster
 
-# Installation Instructions on the Cluster
+# Environment Preparation on the Cluster
 
-1. Log on to the cluster with `ssh cedar.computecanada.ca` and make sure to stay in your home `~` directory
+1. Log on to the cluster with `ssh cedar` and make sure to stay in your home `~` directory by typing `cd ~`
 2. To fully automate an (opinionated) setup, type
 ```bash
 git clone https://github.com/ubcecon/cluster_tools.git
 ```
+This setup will install the environment you need for Jupyter Notebooks in Julia.
 3. Then run the built in setup script (warning: this will replace your `.bashrc` and delete `.julia` and a few others)
 ```bash
 bash ~/cluster_tools/bin/setup_cluster.sh
