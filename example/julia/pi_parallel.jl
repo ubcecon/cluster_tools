@@ -18,7 +18,7 @@ return s
 
 end
 
-N = 33554432
+N = 65536
 for i = 1 : 50
     @time tmp = mypi_par(N)
 end

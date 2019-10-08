@@ -22,4 +22,6 @@ num_cores = parse(Int, ENV["SLURM_CPUS_PER_TASK"])
 # num_cores = 2
 addprocs(num_cores)
 
-user_defined_function
+include("user_defined_function.jl")
+
+EOF
