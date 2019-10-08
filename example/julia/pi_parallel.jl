@@ -1,10 +1,3 @@
-using Distributed
-
-# Launch worker processes
-num_cores = parse(Int, ENV["SLURM_CPUS_PER_TASK"])
-# num_cores = 2
-addprocs(num_cores)
-
 # For the function that should be executed on each single core, use @everywhere macro
 @everywhere function myf(x)
     return 4.0 / (1.0 + x * x)
@@ -28,8 +21,4 @@ end
 N = 33554432
 for i = 1 : 50
     @time tmp = mypi_par(N)
-end
-
-for i in workers()
-    rmprocs(i)
 end
