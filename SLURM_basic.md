@@ -17,4 +17,4 @@
 ## File transfer
 It is recommended to edit the `~/.ssh/config` file to rename the cluster. In this way you don't have to retype a long server name or your username/password every time. See the optional part of [setup](setup.md) for details.
 
-Copy files and folders from local machine to `cedar`: `scp FILENAME_ON_LOCAL_MACHINE cedar:~/FILEPATH_ON_CLUSTER`
+Copy files and folders from local machine to `cedar`: `scp FILENAME_ON_LOCAL_MACHINE cedar:~/FILEPATH_ON_CLUSTER`. `scp` is essentially the SSH version of Linux copy command, therefore, everything that works for `cp` would work for `scp` as well. For example you can call `scp -r` to copy folders.
