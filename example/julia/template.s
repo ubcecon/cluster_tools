@@ -2,7 +2,7 @@
 
 #SBATCH --job-name=Julia
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=2
+#SBATCH --cpus-per-task=16
 #SBATCH --mem=16GB
 #SBATCH --time=1:00:00
 
@@ -13,7 +13,7 @@ echo
 echo "Hostname: $(hostname)"
 echo
 
-cat<<EOF | srun julia -nodisplay
+cat<<EOF | srun julia
 
 using Distributed
 
