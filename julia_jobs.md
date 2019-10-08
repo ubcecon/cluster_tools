@@ -1,6 +1,6 @@
 # Scheduled Non-interactive Julia jobs
 
-In Julia 1.2.0, we use `Distributed` library to execute parallel operations.
+In Julia 1.2.0, we use `Distributed` library to execute parallel operations. In particular, `Distributed` library supports one node with multiple cores.
 
 1. Learn some [basic SLURM and file transfer commands](SLURM_basic.md)
 1. Go to `/example/julia/` in this repository, and copy `submit.sh` and `template.s` to the folder where your Julia file resides
