@@ -8,43 +8,43 @@ First, if on Windows, make sure the system is updated (any version of an updated
 Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Cedar) cluster on [ComputeCanada](https://www.computecanada.ca/). You can also try other clusters by yourself, see [List of Clusters](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/).
 
 ## Create an environment variable and Login
-While not strictly needed, an environment variable for your username will help significantly.
+1. While not strictly needed, an environment variable for your username will help significantly.
 
-**Linux / Mac OS**
+	**Linux / Mac OS**
 
-If your login is `YOURUSERNAME` then run
-```bash
-export CCUSER=YOURUSERNAME
-```
-Additionally, add it to your `.bashrc`,
-```bash
-vim .bashrc
-```
-Then add `export CCUSER=YOURUSERNAME` at the bottom
+	If your login is `YOURUSERNAME` then run
+	```bash
+	export CCUSER=YOURUSERNAME
+	```
+	Additionally, add it to your `.bashrc`,
+	```bash
+	vim .bashrc
+	```
+	Then add `export CCUSER=YOURUSERNAME` at the bottom
 
-In Vim, you go `<ESC> i` to enter insert mode, make your changes, and then `<ESC> :wq!` to save and exit (`:w` means to save, `:q` means to exit, you can also type `:help` for more details).
+	In Vim, you go `<ESC> i` to enter insert mode, make your changes, and then `<ESC> :wq!` to save and exit (`:w` means to save, `:q` means to exit, you can also type `:help` for more details).
 
-**Windows Powershell**
+	**Windows Powershell**
 
-If your login is `YOURUSERNAME` then run
-```powershell
-[Environment]::SetEnvironmentVariable("CCUSER", "YOURUSERNAME", "Machine")
-```
-to add an global, persistent environment variable. You can also manually add this environment variable through **Control Panel**.
+	If your login is `YOURUSERNAME` then run
+	```powershell
+	[Environment]::SetEnvironmentVariable("CCUSER", "YOURUSERNAME", "Machine")
+	```
+	to add an global, persistent environment variable. You can also manually add this environment variable through **Control Panel**.
 
-Now, you can login to ComputeCanada using your username and password.
+2. You can login to ComputeCanada using your username and password.
 
-**Linux / Mac OS**
-```bash
-ssh $CCUSER@cedar.computecanada.ca
-```
-**Windows Powershell**
-```powershell
-ssh $env:CCUSER@cedar.computecanada.ca
-```
-The first time you login to the cluster, it will add a fingerprint to your local machine. Type `yes` when you encounter that question.
+	**Linux / Mac OS**
+	```bash
+	ssh $CCUSER@cedar.computecanada.ca
+	```
+	**Windows Powershell**
+	```powershell
+	ssh $env:CCUSER@cedar.computecanada.ca
+	```
+	The first time you login to the cluster, it will add a fingerprint to your local machine. Type `yes` when you encounter that question.
 
-You can close the connection by typing `exit`.
+3. To close the connection, type `exit` and enter, then close the terminal.
 
 ## Generate Keys and Set Configuration for Login
 
@@ -77,15 +77,18 @@ To make your life easier in logging into the cluster and transferring files from
 # Environment Preparation on the Cluster
 
 1. Log on to the cluster with `ssh cedar` and make sure to stay in your home `~` directory by typing `cd ~`
+
 2. To fully automate an (opinionated) setup, type
 ```bash
 git clone https://github.com/ubcecon/cluster_tools.git
 ```
 This setup will install the environment you need for Jupyter Notebooks in Julia.
+
 3. Then run the built in setup script (warning: this will replace your `.bashrc` and delete `.julia` and a few others)
 ```bash
 bash ~/cluster_tools/bin/setup_cluster.sh
 ```
+
 4. This should take 5'ish minutes for the full setup.  After it is done, type `exit` to close the cluster, reshell in, and you should be good to go.
 
 Note: If the `cluster_tools` are modified and you want to redo the setup, simply execute:
