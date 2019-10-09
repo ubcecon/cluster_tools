@@ -16,6 +16,7 @@
 
 After you have done the initial setup you can run your codes in several ways:
 - Run your programs on a login node (for small tests ONLY).  Do not ask for lots of resources this way!  It isn't how clusters work as the resources on login nodes are limited. You may **get penalized** by system administrators if you insist to run heavy-duty jobs on login nodes.
+- Run your `julia` code inside `Atom-Juno` environment.
 - Run multiple-core interactive jobs through command prompt:
 ```bash
 salloc --time=1:0:0 --nodes=1 --cpus-per-task=4
