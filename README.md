@@ -16,12 +16,12 @@
 
 After you have done the initial setup you can run your codes in several ways:
 - Run your programs on a login node (for small tests ONLY).  Do not ask for lots of resources this way!  It isn't how clusters work as the resources on login nodes are limited. You may **get penalized** by system administrators if you insist to run heavy-duty jobs on login nodes.
-- Run your `julia` code inside `Atom-Juno` environment.
+- Run your `julia` code inside [Juno](https://junolab.org/) remotely and interactively on a login node.
 - Run multiple-core interactive jobs through command prompt:
 ```bash
 salloc --time=1:0:0 --nodes=1 --cpus-per-task=4
 ```
-this example grants you access to 4 physical cores with shared memory for one hour (see [SLURM](SLURM_basic.md) for further explanations). This is useful when you experiment your code before submitting a serious job. **Note**: ComputeCanada does not allow you to submit any job under your home directory. Make sure you current working directory is in `\project` or `\scratch` on the server.
+this example grants you access to 4 physical cores with shared memory for one hour (see [SLURM](SLURM_basic.md) for further explanations). This is useful when you experiment your code before submitting a serious job. **Note**: ComputeCanada does not allow you to submit any job under your home directory. Make sure you current working directory is in `/project` or `/scratch` on the server.
 - Run an [Interactive Jupyter Job](jupyter_jobs.md) accessed from your local machine
 - Submit non-interactive, distributed computing jobs: [Julia](julia_jobs.md), [MATLAB](matlab_jobs.md)
 
