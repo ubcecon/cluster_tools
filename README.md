@@ -23,7 +23,11 @@ salloc --time=1:0:0 --nodes=1 --cpus-per-task=4
 ```
 this example grants you access to 4 physical cores with shared memory for one hour (see [SLURM](SLURM_basic.md) for further explanations). This is useful when you experiment your code before submitting a serious job. **Note**: ComputeCanada does not allow you to submit any job under your home directory. Make sure you current working directory is in `/project` or `/scratch` on the server.
 - Run an [Interactive Jupyter Job](jupyter_jobs.md) accessed from your local machine
-- Submit non-interactive, distributed computing jobs: [Julia](julia_jobs.md), [MATLAB](matlab_jobs.md)
+- Submit non-interactive jobs
+   - [Non-interactive Julia jobs](julia_jobs.md)
+   - [Non-interactive MATLAB jobs](matlab_jobs.md)
+
+**Note**: several thing
 
 ## More on Compute Canada
 - List of [Available Software](https://docs.computecanada.ca/wiki/Available_software)

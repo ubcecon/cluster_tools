@@ -50,7 +50,7 @@ Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Ce
 
 To make your life easier in logging into the cluster and transferring files from and to the cluster, we create a configuration file and generate `ssh` keys for that.
 
-1. Open your terminal (`powershell` if on Windows), type `ssh-keygen` and run. Accept the default location if asked. The default location is `~/.ssh/id_rsa.pub` (Windows users: you can `cd ~` in `powershell` as well. The directory `~` is equivalent to `C:\Users\YOURUSERNAME`. You can use either `/` or `\` in navigating to directories)
+1. Open your terminal (`powershell` if on Windows), type `ssh-keygen` and run. Accept the default location if asked. The default location is `~/.ssh/id_rsa.pub` (Windows users: you can `cd ~` in `powershell` as well. The directory `~` is equivalent to `C:\Users\YOURUSERNAME`. You can use either `/` or `\` in navigating to directories). **Do not replace** the file by typing `n` and enter if `id_rsa` already exists on your local machine and a question pop up when running `ssh-keygen`
 2. Then attach the `ssh` key to ComputeCanada, where you should replace `$CCUSER` with your own username if you did not set that environment variable above.
 
     **Linux / Mac OS**
