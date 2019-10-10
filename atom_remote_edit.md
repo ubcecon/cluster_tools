@@ -10,7 +10,12 @@ Once you completed connecting to ComputeCanada with `ssh`, follow these steps to
 
 1. Press `Ctrl+Shift+p` on Windows (or `Command+Shift+p` on Mac) and enter `ftp remote edit` and find `Edit servers` command.
 
-    Fill out the box to look like this (using your own username instead of `arnsood`)
+    Fill out the box to look like this
+
+    - `Hostname` as `cedar.computecanada.ca`
+    - `Protocol` as `sftp`
+    - Use your own username and password for ComputeCanada
+    - Set the initial directory to be `/home/YOURUSERNAME`
 
     <img src="https://github.com/ubcecon/cluster_tools/blob/master/src/atom-screenshot.png?raw=true">
 
