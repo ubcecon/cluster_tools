@@ -8,10 +8,10 @@ Once you completed connecting to ComputeCanada with `ssh`, follow these steps to
 
 1. After completion of installation, press `Ctrl+Space` to set your password to `ftp-remote-edit`. It is a mandatory step required by the package.
 
-1. Press `Ctrl+Shift+p` on Windows (or `Command+Shift+p` on Mac) and enter `ftp remote edit` and find `Edit servers` command. 
+1. Press `Ctrl+Shift+p` on Windows (or `Command+Shift+p` on Mac) and enter `ftp remote edit` and find `Edit servers` command.
 
-Fill out the box to look like this (using your own username instead of `arnsood`)
+    Fill out the box to look like this (using your own username instead of `arnsood`)
 
-<img src="https://github.com/ubcecon/cluster_tools/blob/master/src/atom-screenshot.png?raw=true">
-    
+    <img src="https://github.com/ubcecon/cluster_tools/blob/master/src/atom-screenshot.png?raw=true">
+
 1. Now on the left panel inside Atom you can see `Remote`, and then double click on the server you just set. You can add/delete/edit files now, and they will be directly synchronized on ComputeCanada.
