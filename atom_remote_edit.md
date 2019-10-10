@@ -12,6 +12,6 @@ Once you completed connecting to ComputeCanada with `ssh`, follow these steps to
 
 Fill out the box to look like this (using your own username instead of `arnsood`)
 
-![](bin/atom-screenshot.png)
+![scale=0.5](bin/atom-screenshot.png)
     
 1. Now on the left panel inside Atom you can see `Remote`, and then double click on the server you just set. You can add/delete/edit files now, and they will be directly synchronized on ComputeCanada.
