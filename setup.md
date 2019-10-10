@@ -1,9 +1,9 @@
 # Installation instructions
-First, if on Windows, make sure the system is updated (any version of an updated Windows 10 would work). You can choose either to stick with `powershell` or install [WSL](WSL.md), then follow either of the two:
+First, if on Windows, make sure the system is updated (any version of an updated Windows 10 would work). You can choose either to stick with `powershell` or install [WSL](https://github.com/ubcecon/tutorials/blob/master/WSL.md), then follow either of the two:
 
 - Run Powershell in `Run as Administrator` mode. Follow instructions for Windows.
 
-- Get Ubuntu on with [WSL](WSL.md) and open an Ubuntu terminal. Follow instructions for Linux / Mac OS after that. Always start with your `$HOME` directory by `cd ~`.
+- Get Ubuntu on with [WSL](https://github.com/ubcecon/tutorials/blob/master/WSL.md) and open an Ubuntu terminal. Follow instructions for Linux / Mac OS after that. Always start with your `$HOME` directory by `cd ~`.
 
 Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Cedar) cluster on [ComputeCanada](https://www.computecanada.ca/). You can also try other clusters by yourself, see [List of Clusters](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/).
 
