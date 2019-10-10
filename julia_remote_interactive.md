@@ -2,7 +2,7 @@
 
 1. Install Atom/Juno: See [QuantEcon instructions](https://julia.quantecon.org/more_julia/tools_editors.html#Atom).
 
-1. Once you set up [remote editing](atom_remote_edit.md), in Atom go to `Juno->Settings->Remote Settings` and set the remote path to be `/home/YOURUSERNAME/cluster_tools/bin/launch_juno.sh`
+1. Once you set up [remote editing](atom_remote_edit.md), in Atom go to `Juno->Settings->Remote Options` and set `Command to execute Julia on the remote server` to be `/home/YOURUSERNAME/cluster_tools/bin/launch_juno.sh`
 
 ![](src/juno-step-2.png)
 
