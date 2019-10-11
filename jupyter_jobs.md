@@ -6,7 +6,9 @@ Clusters are inherently based on scheduling of jobs. To use Jupyter interactivel
 bash ~/cluster_tools/bin/launch_jupyter.sh
 ```
 
-2. Then in another terminal **on your local machine**, start a tunnel (replacing the cdrXXX and username if required)
+2. Wait until the server allocates you some resources (i.e., once you see output like `salloc: Nodes cdr768 are ready for job`). 
+
+  Then in another terminal **on your local machine**, start a tunnel (replacing the cdrXXX and username if required)
 ```bash
 ssh -L 8888:cdrXXX.int.cedar.computecanada.ca:8888 $CCUSER@cedar.computecanada.ca -N -f
 ```
