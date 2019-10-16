@@ -24,7 +24,7 @@ You can utilize resources on the cluster in several ways:
 1. Submit non-interactive jobs:
    - [Non-interactive Julia jobs](julia_jobs.md)
    - [Non-interactive MATLAB jobs](matlab_jobs.md)
-1. Run [remote, interactive julia sessions](julia_remote_interactive.md) with Atom and Juno environments.
+1. (Unfinished) Run [remote, interactive julia sessions](julia_remote_interactive.md) with Atom and Juno environments.
 
 **Notes**:
 - As a large shared grid, ComputeCanada uses SLURM job scheduler ([What is a scheduler?](https://docs.computecanada.ca/wiki/What_is_a_scheduler%3F)) to allocate resources.
