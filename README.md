@@ -34,4 +34,4 @@ You can utilize resources on the cluster in several ways:
 ## More on Compute Canada
 - List of [Available Software](https://docs.computecanada.ca/wiki/Available_software)
 - For more on our [Interactive Jupyter Job](jupyter_jobs.md) see may be easier
-    - [Jupyter](https://docs.computecanada.ca/wiki/Jupyter) and more on [`ssh` Tunnelling](https://docs.computecanada.ca/wiki/`ssh`_tunnelling).
+    - [Jupyter](https://docs.computecanada.ca/wiki/Jupyter) and more on [`ssh` Tunnelling](https://docs.computecanada.ca/wiki/SSH_tunnelling).
