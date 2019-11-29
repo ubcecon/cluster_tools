@@ -13,7 +13,7 @@ less convenient, this ensures that there aren't a
 bunch of idle VNC sessions and programs in them using up memory (a
 common situation on `turtle.econ.ubc.ca`). 
 
-1. ssh to a Compute Canada server
+1. ssh to a Compute Canada server. In these terminal snippets, commands preceded by `paul@pts2` are run on my local computer. Commands run on compute canada have `[schrimpf@cedar` or `[schrimpf@cdr490` beginning the prompt.
 
 ```console
 paul@pts2 ~ $ ssh schrimpf@cedar.computecanada.ca
