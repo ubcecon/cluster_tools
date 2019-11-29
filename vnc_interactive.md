@@ -5,17 +5,17 @@
 Here are instructions for running a VNC session on
 cedar.computecanada.ca.
 
-While running the VNC session should give a similar experience to
+While running, the VNC session should give a similar experience to
 `turtle.econ.ubc.ca`. An important difference though is that while
 turtle allows users to have persistent VNC sessions, on Compute Canada
-you typically have to start a new VNC session each time you use
-it. While slightly less convenient, this ensures that there aren't a
+you have to start a new VNC session each time you use it. While slightly
+less convenient, this ensures that there aren't a
 bunch of idle VNC sessions and programs in them using up memory (a
 common situation on `turtle.econ.ubc.ca`). 
 
 1. ssh to a Compute Canada server
 
-```
+```console
 paul@pts2 ~ $ ssh schrimpf@cedar.computecanada.ca
 Last login: Thu Nov 28 16:03:16 2019 from 137.82.185.90
 =============================================================================
@@ -26,14 +26,14 @@ Email support@computecanada.ca for assistance and/or to report problems.
 =============================================================================
 ```
 
-2. Enter you a /scratch or /project directory
+2. Enter your /scratch or /project directory
 
-```
+```console
 [schrimpf@cedar1 ~]$ cd /scratch/schrimpf
 ```
 
 3. Submit an interactive job request
-```
+```console
 [schrimpf@cedar1 schrimpf]$ salloc --time 5:0:0 --ntasks=1 --cpus-per-task=2 --mem=4Gb
 salloc: Granted job allocation 31922474
 salloc: Waiting for resource configuration
@@ -48,14 +48,14 @@ salloc: Nodes cdr490 are ready for job
 4. Set XDG\_RUNTIME . You will have strange errors inside vnc
    otherwise.
    
-```
+```console
 [schrimpf@cdr490 schrimpf]$ export XDG_RUNTIME_DIR=${SLURM_TMPDIR}
 ```
 
 
 5. Start VNC. It will prompt for a password on first use. 
 
-```
+```console
 [schrimpf@cdr490 schrimpf]$ vncserver
 New 'cdr490.int.cedar.computecanada.ca:1 (schrimpf)' desktop is cdr490.int.cedar.computecanada.ca:1
 
@@ -72,13 +72,13 @@ Log file is /home/schrimpf/.vnc/cdr490.int.cedar.computecanada.ca:1.log
    to a local port 590X (5901 is a typical choice, but I will use 5902
    below so as not to confuse with the remote 5901)
 
-```
+```console
 paul@pts2 ~ $ ssh schrimpf@cedar.computecanada.ca -L5902:cdr490:5901
 ```
 
 7. Open a vnc client to your chosen display X or port 590X. 
 
-```
+```console
 paul@pts2 ~ $ vncviewer :2
 ```
 
