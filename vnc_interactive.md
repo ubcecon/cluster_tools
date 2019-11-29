@@ -33,7 +33,6 @@ Email support@computecanada.ca for assistance and/or to report problems.
 ```
 
 3. Submit an interactive job request
-
 ```
 [schrimpf@cedar1 schrimpf]$ salloc --time 5:0:0 --ntasks=1 --cpus-per-task=2 --mem=4Gb
 salloc: Granted job allocation 31922474
@@ -41,11 +40,10 @@ salloc: Waiting for resource configuration
 salloc: Nodes cdr490 are ready for job
 [schrimpf@cdr490 schrimpf]$
 ```
-
-This asks for a 5 hour session on 1 node with 2 cores and 4Gb
-memory. In my limited experimentation, smallish requests like this
-have always been fulfilled within seconds. For large requests you
-might have to wait, but I have no idea what qualifies as "large." 
+  This asks for a 5 hour session on 1 node with 2 cores and 4Gb
+  memory. In my limited experimentation, smallish requests like this
+  have always been fulfilled within seconds. For large requests you
+  might have to wait, but I have no idea what qualifies as "large." 
 
 4. Set XDG\_RUNTIME . You will have strange errors inside vnc
    otherwise.
@@ -55,7 +53,7 @@ might have to wait, but I have no idea what qualifies as "large."
 ```
 
 
-4. Start VNC. It will prompt for a password on first use. 
+5. Start VNC. It will prompt for a password on first use. 
 
 ```
 [schrimpf@cdr490 schrimpf]$ vncserver
@@ -65,7 +63,7 @@ Starting applications specified in /home/schrimpf/.vnc/xstartup
 Log file is /home/schrimpf/.vnc/cdr490.int.cedar.computecanada.ca:1.log
 ```
 
-5. Open another ssh session with an appropriate tunnel. You need the
+6. Open another ssh session with an appropriate tunnel. You need the
    `cdr490` and `1` from `cdr490.int.cedar.computecanada.ca:1`. I
    think, that you also need to keep your initial ssh connection
    active. You want to connect port 5900 + 1 
@@ -78,13 +76,13 @@ Log file is /home/schrimpf/.vnc/cdr490.int.cedar.computecanada.ca:1.log
 paul@pts2 ~ $ ssh schrimpf@cedar.computecanada.ca -L5902:cdr490:5901
 ```
 
-6. Open a vnc client to your chosen display X or port 590X. 
+7. Open a vnc client to your chosen display X or port 590X. 
 
 ```
 paul@pts2 ~ $ vncviewer :2
 ```
 
-7. In your VNC session, load modules and run whatever program you need.
+8. In your VNC session, load modules and run whatever program you need.
 
 ![](matlab_cedar_vnc.png)
 
