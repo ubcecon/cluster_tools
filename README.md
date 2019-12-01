@@ -21,6 +21,7 @@ You can utilize resources on the cluster in several ways:
    ```
    see [SLURM basics](SLURM_basic.md) for more details.
 1. Run an [Interactive Jupyter Job](jupyter_jobs.md) accessed from your local machine
+1. Run a GUI-supported interactive job (like MATLAB) with [Virtual Network Computing](vnc_interactive.md)
 1. Submit non-interactive jobs:
    - [Non-interactive Julia jobs](julia_jobs.md)
    - [Non-interactive MATLAB jobs](matlab_jobs.md)
