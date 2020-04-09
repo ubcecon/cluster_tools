@@ -38,4 +38,4 @@ You can utilize resources on the cluster in several ways:
     - [Jupyter](https://docs.computecanada.ca/wiki/Jupyter) and more on [`ssh` Tunnelling](https://docs.computecanada.ca/wiki/SSH_tunnelling).
 
 ## Tools for UBC ARC Sockeye System
-[UBC ARC Sockeye](https://arc.ubc.ca/ubc-arc-sockeye) is an internal computing cluster for UBC. The ways to utilize this cluster is similar to ComputeCanada, You need an `ssh` supporting environment as well. There are mainly two differences: 1) ARC Sockeye uses MFA, and therefore `sftp` is preferred in transferring data back and forth; 2) ARC Sockeye uses PBS job scheduler. 
+[UBC ARC Sockeye](https://arc.ubc.ca/ubc-arc-sockeye) is an internal computing cluster for UBC. The ways to utilize this cluster is similar to ComputeCanada, You need an `ssh` supporting environment as well. There are mainly two differences: 1) ARC Sockeye uses MFA, and therefore `sftp` is preferred in transferring data back and forth; 2) ARC Sockeye uses PBS job scheduler. More details are here [Setup Instructions for ARC Sockeye](ARC_setup.md)
