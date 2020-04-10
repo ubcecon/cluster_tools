@@ -6,6 +6,7 @@ First, if on Windows, make sure the system is updated (any version of an updated
 - Get Ubuntu on with [WSL](https://github.com/ubcecon/tutorials/blob/master/WSL.md) and open an Ubuntu terminal. Follow instructions for Linux / Mac OS after that. Always start with your `$HOME` directory by `cd ~`.
 
 Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Cedar) cluster on [ComputeCanada](https://www.computecanada.ca/). You can also try other clusters by yourself, see [List of Clusters](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/).
+**Note**: Access to [Niagara](https://docs.computecanada.ca/wiki/Niagara) is not allowed automatically, and you can [opt-in](https://ccdb.computecanada.ca/services/opt_in).
 
 ## Create an environment variable and Login
 1. While not strictly needed, an environment variable for your username will help significantly.
