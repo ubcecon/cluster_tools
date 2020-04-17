@@ -64,7 +64,7 @@ To make your life easier in logging into the cluster and transferring files from
     ```
 
     You will need to login with your password again, but afterwards you will not need to login when you `ssh` to that server.
-5. Set up a `config` file to simply `ssh` and `scp` processes
+5. Set up a `config` file to simplify `ssh` and `scp` processes
     - Open a text editor and enter the following (with your own ComputeCanada username replaced)
     ```bash
     Host cedar
