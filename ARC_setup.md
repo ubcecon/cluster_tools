@@ -37,3 +37,16 @@ To avoid entering password every time when you log in, you can create a configur
 ## Transferring Files from/to the Cluster
 
 ## Submit Tasks
+UBC ARC Sockeye uses PBS job queueing system (you can find the full manual [here](https://www.altair.com/pdfs/pbsworks/PBSUserGuide19.2.3.pdf), and UBC ARC provides a command comparison table [here](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-SlurmtoPBSTranslation)). Judging from the user's frontend, PBS is not very different from SLURM.
+
+### PBS related commands
+- Submit a job: `qsub myscript.s`, the script file contains SLURM arguments
+- List current (pending and running) jobs for some user: `qstat -u YOUR_CWL_ID`
+- Cancel a job: `qdel JOBID`, where you can check `JOBID` from the `qstat` command above
+
+### PBS script file options
+- `-N` name of the job
+- `-M [email_address]` Email notifications of the jobs
+- `-m mail-type abe` for `Abort`, `Begin`, and `End`
+- `-l mem=[size][mb/gb]` memory can be in MB or GB
+- `-l walltime=[hh:mm:ss]` when the job reaches time limit it will be automatically terminated
