@@ -1,5 +1,6 @@
 # Setup Instructions for UBC ARC Sockeye
 
+Going through the official [documentation](https://confluence.it.ubc.ca/display/UARC/UBC+ARC+Technical+User+Documentation) is always beneficial.
 **Note:** You have to be either on campus or using UBC VPN before connecting to ARC Sockeye or checking the documentation.
 
 ## Login and Key Generation
@@ -35,6 +36,13 @@ To avoid entering password every time when you log in, you can create a configur
     - After that you only need to `ssh sockeye` to log in.
 
 ## Transferring Files from/to the Cluster
+While `scp` is well-supported, you have to go through MFA every time. Therefore, a better option is `sftp`. By keeping the `sftp` session alive you will only have to go through MFA once.
+
+The command is
+``` bash
+sftp YOUR_CWL_ID@dtn.sockeye.arc.ubc.ca
+```
+Notice that you can upload a key to `dtn.sockeye.arc.ubc.ca` as well.
 
 ## Submit Tasks
 UBC ARC Sockeye uses PBS job queueing system (you can find the full manual [here](https://www.altair.com/pdfs/pbsworks/PBSUserGuide19.2.3.pdf), and UBC ARC provides a command comparison table [here](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-SlurmtoPBSTranslation)). Judging from the user's frontend, PBS is not very different from SLURM.
