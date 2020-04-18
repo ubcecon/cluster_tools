@@ -6,6 +6,7 @@ First, if on Windows, make sure the system is updated (any version of an updated
 - Get Ubuntu on with [WSL](https://github.com/ubcecon/tutorials/blob/master/WSL.md) and open an Ubuntu terminal. Follow instructions for Linux / Mac OS after that. Always start with your `$HOME` directory by `cd ~`.
 
 Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Cedar) cluster on [ComputeCanada](https://www.computecanada.ca/). You can also try other clusters by yourself, see [List of Clusters](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/).
+**Note**: Access to [Niagara](https://docs.computecanada.ca/wiki/Niagara) is not allowed automatically, and you can [opt-in](https://ccdb.computecanada.ca/services/opt_in).
 
 ## Create an environment variable and Login
 1. While not strictly needed, an environment variable for your username will help significantly.
@@ -63,7 +64,7 @@ To make your life easier in logging into the cluster and transferring files from
     ```
 
     You will need to login with your password again, but afterwards you will not need to login when you `ssh` to that server.
-5. Set up a `config` file to simply `ssh` and `scp` processes
+5. Set up a `config` file to simplify `ssh` and `scp` processes
     - Open a text editor and enter the following (with your own ComputeCanada username replaced)
     ```bash
     Host cedar
