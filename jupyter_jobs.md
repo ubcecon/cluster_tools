@@ -15,6 +15,8 @@ ssh -L 8888:cdrXXX.int.cedar.computecanada.ca:8888 $CCUSER@cedar.computecanada.c
 
 3. The original terminal (connected via `ssh` to the cedar cluster) should output a Jupyter link like `http://127.0.0.1:8888/?token=2ba204c33623ae06691da66a38df52a31e44a9c87acc28a4`. 
 
+4. (For Windows only) Terminate the `ssh` session from Task Manager on your local machine after you finished running the Jupyter notebook or if you are going to launch a new task.
+
 Copy the link from the cluster terminal with token, and open that webpage with any of your web browsers (Chrome, Firefox, etc).
 
 Note: These codes submit an interactive job to the cluster behind the scenes. ComputeCanada uses [SLURM](https://docs.computecanada.ca/wiki/Running_jobs) scheduling system. The Jupyter notebooks created in this way will be stored on the cluster under directory `$HOME/scratch/`.
