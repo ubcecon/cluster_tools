@@ -27,8 +27,9 @@ You can utilize resources on the cluster in several ways:
    - [Non-interactive MATLAB jobs](matlab_jobs.md)
 1. (Unfinished) Run [remote, interactive julia sessions](julia_remote_interactive.md) with Atom and Juno environments.
 
-**Notes**:
+**Notes (Please Read)**:
 - As a large shared grid, ComputeCanada uses SLURM job scheduler ([What is a scheduler?](https://docs.computecanada.ca/wiki/What_is_a_scheduler%3F)) to allocate resources.
+- By default ComputeCanada won't load any specific software like MATLAB or Julia. You need to load the [modules](modules.md) by yourself.
 - Run only small scale tasks on the login node. Do not ask for lots of cores/memories and run heavy-duty jobs on the login nodes, or you may **get penalized** by ComputeCanada administrators.
 - ComputeCanada **does not allow** you to submit any SLURM job under your `/home` directory. Make sure you current working directory is in `/project` or `/scratch` on the server.
 
