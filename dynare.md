@@ -17,7 +17,7 @@ Sometimes you just want to run Dynare on a cluster but unfortunately there's no 
    ``` bash
    cd stable-4.6 # or replace wherever dynare is copied to
    autoreconf -si
-   ./configure --with-matlab=/cvmfs/restricted.computecanada.ca/easybuild/software/2020/Core/matlab/2021a.1/bin/matlab --disable-octave --disable-doc --disable-dynare++
+   ./configure --with-matlab=/cvmfs/restricted.computecanada.ca/easybuild/software/2020/Core/matlab/2021a.1/bin/matlab --disable-octave --disable-doc --disable-dynare++ --disable-mex-kalman-steady-state
    make -j20
    ```
 
