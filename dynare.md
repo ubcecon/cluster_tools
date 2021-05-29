@@ -21,7 +21,7 @@ Sometimes you just want to run Dynare on a cluster but unfortunately there's no 
    make -j20
    ```
 
-6. You might want to download and compile x13as if you haven't done that:
+6. You might want to download and compile `x13as` if you haven't done that: (for more information about `x13as` check [here](https://www.census.gov/srd/www/x13as/x13down_pc.html))
 
    ``` bash
    cd ~/x13as
