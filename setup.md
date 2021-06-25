@@ -52,19 +52,13 @@ Through out the instruction we use [Cedar](https://docs.computecanada.ca/wiki/Ce
 To make your life easier in logging into the cluster and transferring files from and to the cluster, we create a configuration file and generate `ssh` keys for that.
 
 1. Open your terminal (`powershell` if on Windows), type `ssh-keygen` and run. Accept the default location if asked. The default location is `~/.ssh/id_rsa.pub` (Windows users: you can `cd ~` in `powershell` as well. The directory `~` is equivalent to `C:\Users\YOURUSERNAME`. You can use either `/` or `\` in navigating to directories). **Do not replace** the file by typing `n` and enter if `id_rsa` already exists on your local machine and a question pop up when running `ssh-keygen`.
-2. Then attach the `ssh` key to ComputeCanada, where you should replace `$CCUSER` with your own username if you did not set that environment variable above.
 
-    **Linux / Mac OS**
-    ```bash
-    ssh-copy-id -i ~/.ssh/id_rsa.pub $CCUSER@cedar.computecanada.ca
-    ```
-    **Windows Powershell**
-    ```powershell
-    cat ~/.ssh/id_rsa.pub | ssh $env:CCUSER@cedar.computecanada.ca "cat >> ~/.ssh/authorized_keys"
-    ```
+2. Then attach the key to Compute Canada servers. *Note: Compute Canada provides a new feature starting from June 2021 to upload public ssh key for all the clusters, see [here](https://docs.computecanada.ca/wiki/SSH_Keys).* Visit [here](https://ccdb.computecanada.ca/ssh_authorized_keys) and copy-paste your public ssh key from 
+   ```bash
+   cat ~/.ssh/id_rsa.pub
+   ```
 
-    You will need to login with your password again, but afterwards you will not need to login when you `ssh` to that server.
-5. Set up a `config` file to simplify `ssh` and `scp` processes
+3. Set up a `config` file to simplify `ssh` and `scp` processes
     - Open a text editor and enter the following (with your own ComputeCanada username replaced)
     ```bash
     Host cedar
